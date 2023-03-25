@@ -75,13 +75,15 @@ const Countries = () => {
               onClick={handleClick}
               style={{
                 background: darkMode ? '#2B3743' : '',
+                color: darkMode ? '#fff' : '',
               }}
             >
               {' '}
               <i
                 className='bi bi-search'
-                style={{ color: darkMode ? '#fff' : '' }}
+                style={{ color: darkMode ? '#fff' : '', marginRight: '10px' }}
               ></i>
+              Search...
             </button>
             {error && <Error />}
           </div>

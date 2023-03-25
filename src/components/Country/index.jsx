@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import {
@@ -32,8 +32,6 @@ const Country = () => {
   const { country } = useParams();
 
   const { darkMode } = useContext(ThemeContext);
-
-  const [borderCountries, setBorderCountries] = useState([]);
 
   const { data, isLoading, isError } = useQuery(
     'CountryQuery',
@@ -79,7 +77,7 @@ const Country = () => {
         </Link>
         <DetailsContainer>
           <Flag>
-            <img src={countryData.flags.svg} alt='' />
+            <img src={countryData.flags.svg} alt={countryData.flags.alt} />
           </Flag>
           <CountryDetails>
             <h3>{countryData.name.common}</h3>
