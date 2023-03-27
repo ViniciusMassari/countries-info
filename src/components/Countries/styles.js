@@ -10,20 +10,20 @@ background: ${(props) => props.darkMode === true ? "#222E37" : "" };
 
 export const SearchCountry = styled.span`
 display: flex;
-margin: 1rem;
-width: 100%;
+flex-wrap: wrap;
+margin-top: 1rem;
 gap: 10px;
 justify-content: space-around;
 div{
     display: flex;
-    gap: 10px;
+   
     align-items: center
 }
     input{
-        min-width: 15rem;
         height: 2rem;
         border-radius: 10px;
         border: none;
+        margin-right:0.875rem;
         padding: 10px;
         outline: none;
         &:focus, &:hover{
@@ -52,6 +52,6 @@ export const CardsWrapper = styled.section`
 display: flex;
 flex-wrap: wrap;
 margin: 1rem;
-gap: 1rem;
+
 justify-content: center;
 `
